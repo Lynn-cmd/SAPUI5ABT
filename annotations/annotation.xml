@@ -1,0 +1,411 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication" />
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZYCHCN_API_BP_001_SRV/$metadata">
+        <edmx:Include Namespace="ZYCHCN_API_BP_001_SRV" Alias="SAP" />
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_PARTNERType">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Partner</PropertyPath>
+                        <PropertyPath>McName1</PropertyPath>
+                        <PropertyPath>BuSort1</PropertyPath>
+                        <PropertyPath>ZzreqApproval</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="{@i18n&gt;Approve}" />
+                            <PropertyValue Property="Action" String="ZYCHCN_API_BP_001_SRV.ZYCHCN_API_BP_001_SRV_Entities/Approve" />
+                            <PropertyValue Property="Inline" Bool="false" />
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated" />
+                            <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Positive" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="{@i18n&gt;Reject}" />
+                            <PropertyValue Property="Action" String="ZYCHCN_API_BP_001_SRV.ZYCHCN_API_BP_001_SRV_Entities/Reject" />
+                            <PropertyValue Property="Inline" Bool="false" />
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated" />
+                            <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Positive" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#General" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Approval" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="General">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="McName1" />
+                                    <PropertyValue Property="Label" String="{@i18n&gt;McName1}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="McName2" />
+                                    <PropertyValue Property="Label" String="{@i18n&gt;McName2}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BuSort1" />
+                                    <PropertyValue Property="Label" String="{@i18n&gt;BuSort1}" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Approval">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BuSort2" />
+                                    <PropertyValue Property="Label" String="{@i18n&gt;BuSort2}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ZzreqApproval" />
+                                    <PropertyValue Property="Label" String="{@i18n&gt;ZzreqApproval}" />
+                                    <PropertyValue Property="Criticality" Path="Flag" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Reason" />
+                                    <PropertyValue Property="Label" String="{@i18n&gt;Reason}" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="{@i18n&gt;BP_INFO}" />
+                        <PropertyValue Property="TypeNamePlural" String="{@i18n&gt;BP_INFO}" />
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Partner" />
+                                <PropertyValue Property="Label" String="{@i18n&gt;Partner}" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Partner" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Partner}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="McName1" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;McName1}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="McName2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;McName2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="McCity1" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;McCity1}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RegionText" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;RegionText}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BuSort1" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;BuSort1}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ZzreqApproval" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ZzreqApproval}" />
+                            <PropertyValue Property="Criticality" Path="Flag" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Reason" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Reason}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BuSort2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;BuSort2}" />
+                        </Record>
+                        <!-- <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="{@i18n&gt;Approve}" />
+                            <PropertyValue Property="Action" String="ZYCHCN_API_BP_001_SRV.ZYCHCN_API_BP_001_SRV_Entities/Approve" />
+                            <PropertyValue Property="Inline" Bool="false" />
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated" />
+                            <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Positive" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="{@i18n&gt;Reject}" />
+                            <PropertyValue Property="Action" String="ZYCHCN_API_BP_001_SRV.ZYCHCN_API_BP_001_SRV_Entities/Reject" />
+                            <PropertyValue Property="Inline" Bool="false" />
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated" />
+                            <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Positive" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon" />
+                        </Record> -->
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_identity/@UI.LineItem" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ID_NUMBER}" />
+                            <PropertyValue Property="ID" String="ID_ITEMs" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_qual/@UI.LineItem" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;QUALIFICATION_DETAILS}" />
+                            <PropertyValue Property="ID" String="QUAL_ITEMs" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_address/@UI.LineItem" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ADDRESS}" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n&gt;LICENSE}" />
+                            <PropertyValue Property="Target" AnnotationPath="to_license/@UI.LineItem" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_contator/@UI.LineItem" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;RELATION}" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_LICENSEType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="LicenseNum" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;idNumber}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="LicenseTypeText" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;TypeText}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValidDateFrom" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;validF}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValidDateTo" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;validT}" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_ADDRESSType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="AddressTypeText" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;AdrKindText}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RegionText" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;RegionText}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="City1" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;City1}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="City2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;City2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Street1" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;StreetAddress}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Street3" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;StreetAddress2}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Street2" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ContactPerson}" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_CONTATORType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FunctionText" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Fnctn}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ContactPersonName" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;FnctnName}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TelNumber" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;TelNumber}" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_QUALType">
+				<Annotation Term="UI.PresentationVariant">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="QualificationText"/>
+									<PropertyValue Property="Descending" Bool="false"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="GroupBy"/>
+						<PropertyValue Property="TotalBy"/>
+						<PropertyValue Property="Total"/>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.LineItem</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast">
+							<Collection>
+								<PropertyPath>QualificationText</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="QualificationText" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Name}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="QualGroupText" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;PupStext}" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_PARTNERType/ZzreqApproval">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ZzreqApproval}" />
+                <Annotation Term="Common.Text" Path="AppDesc">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
+                <Annotation Term="Common.FilterDefaultValue" String="A"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZC_EDD12852_GSP_IND" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ZzreqApproval" />
+                                    <PropertyValue Property="ValueListProperty" String="IND" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="VALUE" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_GSP_INDType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="IND" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="VALUE" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_GSP_INDType/IND">
+                <Annotation Term="Common.Text" Path="VALUE">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_IDENTITYType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="LicenseNum" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;idNumber}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="LicenseTypeText" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;TypeText}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValidDateFrom" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;validF}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValidDateTo" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;validT}" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_APPRLOGType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="objectid" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_PARTNERType/Reason">
+                <Annotation Term="Common.Text" Path="ReasonDesc">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZC_EDD12852_PARTNERType/Comments">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Comments}" />
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZYCHCN_API_BP_001_SRV_Entities/Approve">
+                <Annotation Term="Common.IsActionCritical" Bool="true" />
+                <Annotation Term="Common.SideEffects">
+                    <Record Type="Common.SideEffectsType">
+                        <PropertyValue Property="TargetEntities">
+                            <Collection>
+                                <NavigationPropertyPath>to_log</NavigationPropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZYCHCN_API_BP_001_SRV.ZYCHCN_API_BP_001_SRV_Entities/Reject">
+                <!-- <Annotation Term="Common.IsActionCritical" Bool="true"/> -->
+                <Annotation Term="Common.SideEffects">
+                    <Record Type="Common.SideEffectsType">
+                        <PropertyValue Property="TargetEntities">
+                            <Collection>
+                                <NavigationPropertyPath>to_log</NavigationPropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

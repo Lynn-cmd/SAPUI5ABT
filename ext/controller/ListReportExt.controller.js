@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/model/Filter","sap/ui/comp/smartfilterbar/SmartFilterBar","sap/m/ComboBox"],function(t,i,e,s){"use strict";return{onInit:function(t){},onAfterRendering:function(t){var i=this.byId("zychcn.zbplist::sap.suite.ui.generic.template.ListReport.view.ListReport::ZC_EDD12852_PARTNER--listReport-btnPersonalisation");i.setVisible(false)}}});
+//# sourceMappingURL=ListReportExt.controller.js.map
